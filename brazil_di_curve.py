@@ -322,7 +322,7 @@ def print_contract_summary(contract: pd.DataFrame, selic: pd.DataFrame) -> None:
     print("Last observation: ", contract["data_referencia"].max().date())
     print("Number of observations:", len(contract))
 
-    print(f"\n{CONTRACT} — first and last observations:")
+    print(f"\n{CONTRACT} - first and last observations:")
     columns = [
         "data_referencia", "data_vencimento", "dias_uteis", "years_to_expiry",
         "taxa_ajuste", "preco_ajuste", "dv01", "contratos_abertos",
@@ -352,7 +352,7 @@ def print_late_2024_dv01(late: pd.DataFrame) -> None:
 
     peak = late.loc[late["dv01"].idxmax()]
 
-    print(f"\n{CONTRACT} — late-2024 DV01 check:")
+    print(f"\n{CONTRACT} - late-2024 DV01 check:")
     print(late[["data_referencia", "years_to_expiry", "taxa_ajuste", "dv01"]].iloc[[0, -1]].to_string(index=False))
     print("Peak Q4-2024 DV01:", f"{peak['dv01']:.4f} R$/bp", "on", peak["data_referencia"].date())
 
