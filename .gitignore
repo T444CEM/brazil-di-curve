@@ -1,0 +1,9 @@
+# Downloaded market data stays on your machine: it belongs to B3 and the BCB
+# and is not redistributed here. The first run downloads it into data/.
+data/
+*.db
+*.sqlite
+__pycache__/
+*.pyc
+.venv/
+venv/

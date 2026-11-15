@@ -1,0 +1,7 @@
+pyield==0.65.0
+adjustText==1.4.0
+pandas==3.1.1
+numpy==2.5.4
+matplotlib==3.11.2
+pyarrow==26.0.1
+requests==2.34.2
