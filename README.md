@@ -66,6 +66,22 @@ DV01 is the change in a contract's PU, in reais, for a one basis point move in i
 - The curve is the raw set of contract rates. No interpolation or fitted curve is applied.
 - PYield reads B3's public files. If B3 changes its formats, a newer PYield version may be needed (tested with 0.65.0).
 
+## Acknowledgements
+
+This project stands on the work of these open-source libraries:
+
+| Library | What it does here | Licence |
+|---|---|---|
+| [PYield](https://github.com/crdcj/PYield), by Carlos Carvalho | Downloads and parses B3's historical DI1 futures data. The whole data side of this project depends on it. | MIT |
+| [pandas](https://pandas.pydata.org) | Holds the DI1 and Selic tables, slices them by date and contract | BSD 3-Clause |
+| [NumPy](https://numpy.org) | Scales the chart markers by open interest | BSD 3-Clause |
+| [Matplotlib](https://matplotlib.org) | Draws both charts | Matplotlib (PSF-based) |
+| [adjustText](https://github.com/Phlya/adjustText), by Ilya Flyamer | Moves the contract labels on the curve so they don't overlap | MIT |
+| [Apache Arrow (pyarrow)](https://arrow.apache.org) | Reads and writes the cached Parquet files | Apache 2.0 |
+| [Requests](https://github.com/psf/requests) | Fetches the Selic target from the BCB's open-data API | Apache 2.0 |
+
+The data comes from [B3](https://www.b3.com.br) and [Banco Central do Brasil](https://www.bcb.gov.br) (SGS series 432).
+
 ## License
 
 The code is released under the [MIT License](LICENSE). The market data it downloads belongs to B3 and Banco Central do Brasil, is subject to their terms of use, and is not included in this repository.
